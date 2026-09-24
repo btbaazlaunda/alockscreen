@@ -27,8 +27,7 @@ class AndroidDeviceState(context: Context) : DeviceState {
 
     override fun isAwake(feature: Feature): Boolean = when (feature) {
         Feature.WIFI -> wifi?.isWifiEnabled ?: false
-        // Unknown counts as on, so waking errs toward reconnecting.
-        Feature.MOBILE_DATA -> runCatching { telephony?.isDataEnabled }.getOrNull() ?: true
+        Feature.MOBILE_DATA -> isMobileDataOn()
         Feature.BLUETOOTH -> bluetooth?.adapter?.isEnabled ?: false
         Feature.BATTERY_SAVER -> power?.isPowerSaveMode != true
         Feature.DO_NOT_DISTURB -> when (notifications?.currentInterruptionFilter) {
@@ -37,5 +36,13 @@ class AndroidDeviceState(context: Context) : DeviceState {
             NotificationManager.INTERRUPTION_FILTER_UNKNOWN -> true
             else -> false
         }
+    }
+
+    // ACCESS_NETWORK_STATE is enough on Android 11+, but some OEM builds still demand
+    // READ_PHONE_STATE. Unknown counts as on, so waking errs toward reconnecting.
+    private fun isMobileDataOn(): Boolean = try {
+        telephony?.isDataEnabled ?: true
+    } catch (_: SecurityException) {
+        true
     }
 }
