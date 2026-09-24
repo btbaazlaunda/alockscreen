@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lull</string>
+
+    <!-- Hero -->
+    <string name="hero_awake_title">You\'re awake</string>
+    <string name="hero_awake_hint">Tap when you\'re ready for bed</string>
+    <string name="hero_last_sleep">Last sleep · %1$s of quiet</string>
+    <string name="hero_sleeping_title">Sleep mode is on</string>
+    <string name="hero_sleeping_since">Since %1$s · %2$s</string>
+    <string name="sleep_button_label">Sleep mode</string>
+    <string name="state_on">On</string>
+    <string name="state_off">Off</string>
+    <string name="duration_hours_minutes">%1$dh %2$02dm</string>
+    <string name="duration_minutes">%1$dm</string>
+
+    <!-- Features -->
+    <string name="section_features">While you sleep</string>
+    <string name="feature_wifi">Wi-Fi</string>
+    <string name="feature_wifi_description">Turned off</string>
+    <string name="feature_mobile_data">Mobile data</string>
+    <string name="feature_mobile_data_description">Turned off · calls and texts still arrive</string>
+    <string name="feature_bluetooth">Bluetooth</string>
+    <string name="feature_bluetooth_description">Turned off</string>
+    <string name="feature_battery_saver">Battery saver</string>
+    <string name="feature_battery_saver_description">Turned on · some phones pause it while charging</string>
+    <string name="feature_dnd">Do Not Disturb</string>
+    <string name="feature_dnd_description">Turned on · alarms still ring</string>
+
+    <!-- Shortcuts -->
+    <string name="section_shortcuts">Shortcuts</string>
+    <string name="shortcut_add">Add</string>
+    <string name="shortcut_widget">Home screen widget</string>
+    <string name="shortcut_widget_description">One tap from your home screen</string>
+    <string name="shortcut_widget_manual">Touch and hold your home screen, then pick Widgets → Lull</string>
+    <string name="shortcut_tile">Quick Settings tile</string>
+    <string name="shortcut_tile_description">Switch from the notification shade</string>
+    <string name="shortcut_tile_manual">Edit your Quick Settings and drag in the Sleep mode tile</string>
+
+    <string name="footer">Waking restores only what was on before you slept. Lull has no internet access and collects no data.</string>
+
+    <!-- Setup -->
+    <string name="setup_title">One-time setup</string>
+    <string name="setup_body">Android only lets system tools switch Wi-Fi, mobile data and Bluetooth. Lull uses Shizuku — free, open source and no root needed — to do it for you.</string>
+    <string name="setup_step_install">Install Shizuku</string>
+    <string name="setup_step_start">Start Shizuku</string>
+    <string name="setup_step_start_hint">Open Shizuku and tap Start. After your phone restarts, start it again.</string>
+    <string name="setup_step_allow">Allow Lull</string>
+    <string name="setup_step_allow_denied_hint">Access was denied. Allow Lull from Shizuku\'s list of apps.</string>
+    <string name="setup_action_install">Get Shizuku</string>
+    <string name="setup_action_open">Open Shizuku</string>
+    <string name="setup_action_allow">Allow access</string>
+    <string name="setup_action_guide">Setup guide</string>
+
+    <!-- Toggle outcomes -->
+    <string name="outcome_partial_sleep">Sleep mode is on, but couldn\'t switch %1$s</string>
+    <string name="outcome_partial_wake">Couldn\'t turn %1$s back on. Is Shizuku running?</string>
+    <string name="outcome_failed">Couldn\'t switch %1$s. Is Shizuku running?</string>
+    <string name="outcome_setup_required">Open Lull to finish the one-time setup</string>
+    <string name="outcome_nothing_selected">Choose at least one thing for sleep mode to switch</string>
+
+    <!-- Widget and tile -->
+    <string name="widget_title">Sleep mode</string>
+    <string name="widget_description">Turn sleep mode on or off with one tap</string>
+    <string name="widget_status_on">On · tap to wake</string>
+    <string name="widget_status_off">Off · tap to sleep</string>
+    <string name="tile_label">Sleep mode</string>
+</resources>
