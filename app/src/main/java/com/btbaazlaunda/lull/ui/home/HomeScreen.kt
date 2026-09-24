@@ -108,6 +108,7 @@ fun HomeScreen(
     val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
+    val widgetManualHint = stringResource(R.string.shortcut_widget_manual)
 
     state.outcome?.let { outcome ->
         LaunchedEffect(outcome) {
@@ -166,9 +167,7 @@ fun HomeScreen(
                                 description = R.string.shortcut_widget_description,
                                 onAdd = {
                                     if (!context.requestPinWidget()) {
-                                        scope.launch {
-                                            snackbarHostState.showSnackbar(context.getString(R.string.shortcut_widget_manual))
-                                        }
+                                        scope.launch { snackbarHostState.showSnackbar(widgetManualHint) }
                                     }
                                 },
                             )
