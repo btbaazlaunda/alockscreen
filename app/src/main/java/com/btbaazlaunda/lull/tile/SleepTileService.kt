@@ -56,7 +56,7 @@ class SleepTileService : TileService() {
 
     private fun render(state: SleepState) {
         val tile = qsTile ?: return
-        val status = getString(if (state.sleeping) R.string.state_on else R.string.state_off)
+        val status = getString(if (state.sleeping) R.string.sleep_state_on else R.string.sleep_state_off)
         tile.state = if (state.sleeping) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
         tile.label = getString(R.string.tile_label)
         tile.subtitle = status

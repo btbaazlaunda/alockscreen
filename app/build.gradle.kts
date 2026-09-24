@@ -1,9 +1,7 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.util.Properties
 
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 }
 
@@ -14,7 +12,7 @@ val keystoreProperties = Properties().apply {
 
 android {
     namespace = "com.btbaazlaunda.lull"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.btbaazlaunda.lull"
@@ -57,12 +55,6 @@ android {
 
     lint {
         abortOnError = true
-    }
-}
-
-kotlin {
-    compilerOptions {
-        jvmTarget = JvmTarget.JVM_17
     }
 }
 

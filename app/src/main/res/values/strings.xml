@@ -9,8 +9,8 @@
     <string name="hero_sleeping_title">Sleep mode is on</string>
     <string name="hero_sleeping_since">Since %1$s · %2$s</string>
     <string name="sleep_button_label">Sleep mode</string>
-    <string name="state_on">On</string>
-    <string name="state_off">Off</string>
+    <string name="sleep_state_on">On</string>
+    <string name="sleep_state_off">Off</string>
     <string name="duration_hours_minutes">%1$dh %2$02dm</string>
     <string name="duration_minutes">%1$dm</string>
 

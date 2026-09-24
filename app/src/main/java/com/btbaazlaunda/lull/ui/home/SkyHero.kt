@@ -170,7 +170,7 @@ private fun SleepButton(
         label = "press",
     )
     val label = stringResource(R.string.sleep_button_label)
-    val stateText = stringResource(if (sleeping) R.string.state_on else R.string.state_off)
+    val stateText = stringResource(if (sleeping) R.string.sleep_state_on else R.string.sleep_state_off)
 
     Box(contentAlignment = Alignment.Center, modifier = Modifier.size(240.dp)) {
         Box(

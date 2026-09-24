@@ -30,8 +30,12 @@ class AndroidDeviceState(context: Context) : DeviceState {
         Feature.MOBILE_DATA -> isMobileDataOn()
         Feature.BLUETOOTH -> bluetooth?.adapter?.isEnabled ?: false
         Feature.BATTERY_SAVER -> power?.isPowerSaveMode != true
-        Feature.DO_NOT_DISTURB -> when (notifications?.currentInterruptionFilter) {
-            null,
+        Feature.DO_NOT_DISTURB -> isDoNotDisturbOff()
+    }
+
+    private fun isDoNotDisturbOff(): Boolean {
+        val filter = notifications?.currentInterruptionFilter ?: return true
+        return when (filter) {
             NotificationManager.INTERRUPTION_FILTER_ALL,
             NotificationManager.INTERRUPTION_FILTER_UNKNOWN -> true
             else -> false
